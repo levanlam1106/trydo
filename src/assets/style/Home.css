@@ -1,25 +1,24 @@
 .home {
-    width: 100%;
-    height: 1000px;
-    background-image: url(../image/img/bg-image-26.jpg);
+    background-image: url(../image/img/bg-image-26.jpg) !important;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: 50%;
+    background-size: cover;
     position: relative;
     z-index: 1;
 }
 
 .home1::before {
+    position: absolute; 
     content: "";
     background-color: #00010c;
     width: 100%;
-    height: 667px;
+    height: 100%;
     z-index: -1;
-    position: absolute;
     opacity: .6;
 }
 
-.container {
-    padding: 250px;
+.home .home1 .container {
+    padding: 250px 0 0 0;
 }
 
 .row {
@@ -42,8 +41,7 @@
 .row p {
     font-size: 24px;
     font-weight: 300;
-    padding: 0 12%;
-    margin: 0;
+    padding: 0 25%;
     line-height: 40px;
     color: #c6c9d8;
 
@@ -62,14 +60,32 @@
     font-weight: 500;
     font-size: 20px;
     color: #c6c9d8;
-    border: 2px solid #c6c9d8;
+    border: 2px solid #fff;
     border-radius: 6px;
     padding: 15px 40px;
     transition: all 0.3s ease-out;
+    text-transform: uppercase;
 }
 
 .home-btn a:hover {
     border-color: #e83e8c;
     background-color: #e83e8c;
     margin-top: 27px;
+}
+
+@media only screen and (max-width : 768px) {
+   
+    .row h1 {
+        font-size: 36px;
+        line-height: 30px;
+        margin-top: -20px;
+    }
+    .row p {
+        font-size: 16px !important;
+        line-height: 28px;
+    }
+    .home-btn a {
+        padding: 10px 30px;
+        margin-bottom: 100px;
+    }
 }

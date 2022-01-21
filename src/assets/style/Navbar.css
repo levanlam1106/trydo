@@ -4,16 +4,33 @@
 
 .navbar {
     width: 100%;
-    margin: 20px 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     z-index: 999;
+    transition: all 0.9s ease-in-out;
 }
-
-.logodark {
+.sticky {
+    position: fixed;
+    background-color: #fff;
+    margin: 0;
+    padding-top: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+.sticky .menu-items li a {
+    color: black;
+}
+.sticky .navbar-btn a {
+    color: black;
+    border-color: black;
+}
+.logo {
     display: none;
+}
+.logodark {
+    width: 60%;
 }
 
 .navbar-logo {
@@ -42,40 +59,43 @@
     text-decoration: none;
     color: #c6c9d8;
     margin-right: 30px;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.6s ease-out;
     position: relative;
     padding-bottom: 20px;
 }
-
 .menu-items li a:hover {
     color: var(--colorhover);
 }
 
-.menu-items li.current a::after {
-    width: 100%;
-}
-
 .menu-items li a::after {
     position: absolute;
+    transition: all 0.3s ease-in-out;
     background: var(--colorhover);
     content: "";
     left: 0;
     height: 3px;
     bottom: 0;
     width: 0;
+    
 }
-
+.menu-items li.current a {
+    color: var(--colorhover);
+}
+.menu-items li.current a::after {
+    width: 100%;
+    
+}
 .navbar-btn {
     margin: 0px 50px;
     
 }
 
 .navbar-btn a {
-    color: #fff;
+    color: #c6c9d8;
     text-decoration: none;
-    padding: 12px 25px;
-    border: 2px solid #fff;
+    padding: 15px 25px;
+    border: 2px solid #c6c9d8;
     border-radius: 7px;
     transition: all 0.3s ease-out;
 
@@ -84,7 +104,7 @@
 .navbar-btn a:hover {
     background-color: var(--colorhover);
     border: 2px solid var(--colorhover);
-    padding: 14px 25px 10px 25px;
+    padding: 17px 25px 13px 25px;
 
 }
 
@@ -94,9 +114,16 @@
 
 @media only screen and (max-width : 991px) {
     .navbar {
-        position: relative;
+        position: absolute;
     }
-
+    .sticky {
+        position: fixed;
+        background-color: #fff;
+        margin: 0;
+        padding-top: 10px;
+        border-bottom: 1px solid #ecf0f1;
+    }
+   
     .navbar-right {
         display: flex;
         align-items: center;
@@ -151,7 +178,9 @@
         display: block;
         margin-right: 30px;
     }
-
+    .sticky .menu-icons-click {
+        color: black;
+    }
     .menu-icons-click {
         color: #fff;
         font-size: 20px;

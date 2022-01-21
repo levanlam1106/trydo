@@ -1,0 +1,64 @@
+.about {
+    padding: 120px 50px;
+    background-color: #f8f9fc;
+}
+.about .container {
+    display: flex;
+}
+.about .container img {
+    border-radius: 6px;
+    margin-right: 60px;
+}
+.about .container .about-inner {
+    margin-top: 100px;
+}
+.about .container .about-inner .section-title {
+    line-height: 20px;
+    margin-bottom: 60px;
+}
+.about .container .about-inner .section-title h3 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+.about .container .about-inner .section-title p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #717173;
+    font-weight: 400;
+}
+.descripsion {
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 4px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-out;
+}
+.descripsion:hover {
+    color: #f9004d;
+}
+.section-title-bottom {
+    display: flex;
+}
+.section-title-bottom-right h5 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.section-title-bottom-right p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #717173;
+    font-weight: 400;
+    margin-right: 50px;
+}
+
+@media only screen and (max-width : 991px) {
+    .about .container {
+        display: inline-block;
+    }
+    .section-title-bottom {
+        display: inline-block;
+    }
+}

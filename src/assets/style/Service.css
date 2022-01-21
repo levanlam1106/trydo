@@ -1,0 +1,94 @@
+.service {
+    margin: 150px 50px 0;
+}
+
+.service .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service .container .service-row {
+    flex-basis: 33.333333%;
+    max-width: 33.333333%;
+    padding: 15px;
+}
+
+
+.service .container .service-row a {
+    text-decoration: none;
+}
+
+.service .container .service-row .service-jobs {
+    padding: 45px 60px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+    margin-top: 0px;
+}
+.service .container .service-row .service-jobs:hover {
+    background-color: rgb(245, 65, 78);
+    margin-top: -4px;
+}
+.service .container .service-row .service-jobs:hover .content h2 {
+    color: #fff;
+}
+.service .container .service-row .service-jobs:hover .content p {
+    color: #fff;
+}
+.service .container .service-row .service-jobs:hover .icon {
+    color: #fff;
+}
+.service .container .service-row .service-jobs .icon {
+    font-size: 54px;
+    color: #f9004d;
+    margin-bottom: 20px;
+}
+
+
+.service .container .service-row .service-jobs .content {
+    margin-right: 30px;
+}
+
+.service .container .service-row .service-jobs .content h2 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #1f1f25;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 30px;
+}
+
+.service .container .service-row .service-jobs .content p {
+    color: rgba(29, 29, 36, .75);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+@media only screen and (max-width : 991px) {
+    .service .container .service-row {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    .service .container .service-row .service-jobs {
+        padding: 30px 14px;
+    }
+    .service .container {
+        max-width: 720px;
+        margin-left: 40px;
+    }
+    .service .container .service-row .service-jobs .icon {
+        margin-bottom: 5px;
+    }
+    .service .container .service-row .service-jobs .content h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .service .container .service-row{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .service .container {
+        margin-left: -20px;
+    }
+}
