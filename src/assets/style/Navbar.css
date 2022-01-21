@@ -1,0 +1,168 @@
+:root {
+    --colorhover: #f9004d
+}
+
+.navbar {
+    width: 100%;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 999;
+}
+
+.logodark {
+    display: none;
+}
+
+.navbar-logo {
+    margin-left: 50px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.menu-items li {
+
+    list-style: none;
+}
+
+.menu-items li a {
+    list-style: none;
+    text-decoration: none;
+    color: #c6c9d8;
+    margin-right: 30px;
+    font-size: 16px;
+    transition: all 0.6s ease-out;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.menu-items li a:hover {
+    color: var(--colorhover);
+}
+
+.menu-items li.current a::after {
+    width: 100%;
+}
+
+.menu-items li a::after {
+    position: absolute;
+    background: var(--colorhover);
+    content: "";
+    left: 0;
+    height: 3px;
+    bottom: 0;
+    width: 0;
+}
+
+.navbar-btn {
+    margin: 0px 50px;
+    
+}
+
+.navbar-btn a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    transition: all 0.3s ease-out;
+
+}
+
+.navbar-btn a:hover {
+    background-color: var(--colorhover);
+    border: 2px solid var(--colorhover);
+    padding: 14px 25px 10px 25px;
+
+}
+
+.menu-icons {
+    display: none;
+}
+
+@media only screen and (max-width : 991px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar-menu {
+        width: 350px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -61vw;
+        z-index: 99;
+        padding: 55px;
+        background: #fff;
+        -webkit-transition: all .8s cubic-bezier(.77, .2, .05, 1);
+        transition: all .8s cubic-bezier(.77, .2, .05, 1);
+        display: block;
+        overflow-y: auto;
+    }
+
+    .navbar-right.active .navbar-menu {
+        left: 0;
+    }
+    .menu-items {
+        display: block;
+    }
+
+    .menu-items li {
+        margin: 15px 0px
+    }
+
+    .menu-items li a {
+        color: black;
+        font-size: 16px;
+        padding-bottom: 5px;
+       
+    }
+
+    .menu-items li a::after {
+        position: absolute;
+        background: var(--colorhover);
+        content: "";
+        left: 0;
+        height: 3px;
+        bottom: 0;
+        width: 0;
+        transition: all 0.2s ease-out;
+    }
+
+    .menu-icons {
+        display: block;
+        margin-right: 30px;
+    }
+
+    .menu-icons-click {
+        color: #fff;
+        font-size: 20px;
+    }
+    .navbar-btn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 560) {
+    body {
+        background-color: violet;
+    }
+}
